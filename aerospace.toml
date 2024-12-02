@@ -52,7 +52,7 @@ alt-a = 'workspace A' # Any: Docker, Postman,...
 alt-b = 'workspace B' # Browser
 alt-c = 'workspace C' # Coding
 alt-d = 'workspace D' # Document/Finder
-alt-m = 'workspace M' # Music
+alt-m = 'workspace M' #Music
 alt-n = 'workspace N' # NOTE
 alt-r = 'workspace R' # Reading
 alt-s = 'workspace S' # Setting
@@ -140,6 +140,14 @@ run = "move-node-to-workspace N"
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.mongodb.compass'
+run = 'move-node-to-workspace A'
 
 #which work space is on which monitor
 [workspace-to-monitor-force-assignment]
